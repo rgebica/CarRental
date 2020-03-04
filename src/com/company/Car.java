@@ -5,6 +5,7 @@ public class Car {
     private String brand;
     private String model;
     private int year;
+    private boolean rented = false;
 
     public Car(String id, String brand, String model, int year) {
         this.id = id;
@@ -29,6 +30,14 @@ public class Car {
         return year;
     }
 
+    public boolean isRented() {
+        return rented;
+    }
+
+    public void setRented(boolean rented) {
+        this.rented = rented;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
@@ -36,6 +45,7 @@ public class Car {
                 ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", year=" + year +
+                ", rented=" + rented +
                 '}';
     }
 }
